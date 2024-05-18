@@ -152,11 +152,11 @@
                             <tbody>
                                 {% for song in chart_data %}
                                     <tr>
-                                        <td>{{ song.0 }}</td>
                                         <td>{{ song.1 }}</td>
                                         <td>{{ song.2 }}</td>
                                         <td>{{ song.3 }}</td>
-                                        <td><a href="detail-song">Lihat</a></td>
+                                        <td>{{ song.4 }}</td>
+                                        <td><a href="{% url 'marmut_playlist:detail-song' type=song.0 %}">Lihat</a></td>
                                     </tr>
                                 {% endfor %}
                             </tbody>

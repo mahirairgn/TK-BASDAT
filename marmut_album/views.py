@@ -80,7 +80,6 @@ def show_cek_royalti_label(request):
     return render(request, "cek-royalti-label.html", {"royaltis": royaltis})
 
 
-@csrf_exempt
 def show_lagu_di_album(request, type):
     judul_album = type
 

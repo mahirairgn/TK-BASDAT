@@ -273,6 +273,7 @@ def chart_detail(request, type):
         if type == 'daily':
             query = """
                 SELECT 
+                    K.id AS "Konten ID",
                     K.judul AS "Judul Lagu",
                     AK.nama AS "Oleh",
                     K.tanggal_rilis AS "Tanggal Rilis",
@@ -299,6 +300,7 @@ def chart_detail(request, type):
             weekly_start_date = current_date - timedelta(days=current_date.weekday())
             query = """
                 SELECT 
+                    K.id AS "Konten ID",
                     K.judul AS "Judul Lagu",
                     AK.nama AS "Oleh",
                     K.tanggal_rilis AS "Tanggal Rilis",
@@ -325,6 +327,7 @@ def chart_detail(request, type):
             monthly_start_date = current_date.replace(day=1)
             query = """
                 SELECT 
+                    K.id AS "Konten ID",
                     K.judul AS "Judul Lagu",
                     AK.nama AS "Oleh",
                     K.tanggal_rilis AS "Tanggal Rilis",
@@ -351,6 +354,7 @@ def chart_detail(request, type):
             yearly_start_date = current_date.replace(month=1, day=1)
             query = """
                 SELECT 
+                    K.id AS "Konten ID",
                     K.judul AS "Judul Lagu",
                     AK.nama AS "Oleh",
                     K.tanggal_rilis AS "Tanggal Rilis",
