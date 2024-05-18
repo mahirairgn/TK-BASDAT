@@ -173,11 +173,11 @@ def show_detail_song(request, id_konten):
                     "Artist": song_details[2],
                     "Songwriter": song_details[3].split(', ') if song_details[3] else [],
                     "Durasi": f"{song_details[4]} menit",
-                    "Tanggal Rilis": song_details[5].strftime('%Y-%m-%d'),
+                    "Tanggal_Rilis": song_details[5].strftime('%Y-%m-%d'),
                     "Tahun": song_details[6],
-                    "Total Play": song_details[8],
-                    "Total Downloads": song_details[9],
-                    "Album": song_details[7]
+                    "Total_Play": song_details[9],
+                    "Total_Downloads": song_details[10],
+                    "Album": song_details[8]
                 }
             else:
                 song_data = {}
