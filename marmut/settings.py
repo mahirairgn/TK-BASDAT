@@ -130,6 +130,13 @@ USE_I18N = True
 
 USE_TZ = True
 
+SESSION_COOKIE_DOMAIN = 'web-production-fda5a.up.railway.app'
+CSRF_COOKIE_DOMAIN = 'web-production-fda5a.up.railway.app'
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SAMESITE = 'Lax'
+CSRF_COOKIE_SAMESITE = 'Lax'
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
