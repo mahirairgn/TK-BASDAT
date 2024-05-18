@@ -259,9 +259,7 @@
                                                 <h6>{{ song.0 }}</h6>
                                             </div>
                                         </div>
-                                        <form method="post" action="{% url 'marmut_playlist:detail-song' song.1 %}">
-                                            <button class="btn button-primary" preload="auto" style="font-weight: 500;">Detail</button>
-                                        </form>
+                                        <a href="{% url 'marmut_playlist:detail-song' song.1 %}" class="btn button-primary" preload="auto" style="font-weight: 600;">Detail</a>
                                     </div>
                                 {% endfor %}
                             {% endif %}
@@ -334,7 +332,7 @@
                                                 <h6>{{ podcast.0 }}</h6>
                                             </div>
                                         </div>
-                                        <a href="{% url 'marmut_podcast:show_list_episode_podcast' type=podcast.1 %}" class="btn button-primary" preload="auto">Detail</a>
+                                        <a href="{% url 'marmut_podcast:show_list_episode_podcast' type=podcast.1 %}" class="btn button-primary" preload="auto" style="font-weight: 600;">Detail</a>
                                     </div>
                                 {% endfor %}
                             {% endif %}

@@ -171,12 +171,10 @@
                                 <td>{{ album.2 }} lagu</td>
                                 <td>{{ album.3 }} menit</td>
                                 <td>
-                                    <form method="post" action="{% url 'marmut_album:show_lagu_di_album' type=album.0 %}">
-                                        <button class="btn button-primary" preload="auto" style="margin-bottom: 3px; font-weight: 500;">Lihat Daftar Lagu</button>
-                                    </form>
+                                    <a href="{% url 'marmut_album:show_lagu_di_album' type=album.0 %}" class="btn button-primary" preload="auto" style="font-weight: 600;">Lihat Daftar Lagu</a>
                                     <form method="post" action="{% url 'marmut_album:delete_album' type=album.0 %}">
                                         {% csrf_token %}
-                                        <button class="btn button-primary" preload="auto" style="font-weight: 500;">Hapus</button>
+                                        <a class="btn button-primary" preload="auto" style="font-weight: 600;">Hapus</a>
                                     </form>
                                 </td>
                             </tr>
