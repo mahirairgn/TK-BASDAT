@@ -174,7 +174,7 @@
                                     <a href="{% url 'marmut_album:show_lagu_di_album' type=album.0 %}" class="btn button-primary" preload="auto" style="font-weight: 600;">Lihat Daftar Lagu</a>
                                     <form method="post" action="{% url 'marmut_album:delete_album' type=album.0 %}">
                                         {% csrf_token %}
-                                        <a class="btn button-primary" preload="auto" style="font-weight: 600;">Hapus</a>
+                                        <button class="btn button-primary" preload="auto" style="font-weight: 600;">Hapus</button>
                                     </form>
                                 </td>
                             </tr>

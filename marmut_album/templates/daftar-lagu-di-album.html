@@ -142,7 +142,7 @@
                                 <a href="{% url 'marmut_playlist:detail-song' song.4 %}" class="btn button-primary" preload="auto">Lihat Detail</a>
                                 <form method="post" action="{% url 'marmut_album:delete_song' song.4 %}">
                                     {% csrf_token %}
-                                    <a class="btn button-primary" preload="auto" style="font-weight: 500;">Hapus</a>
+                                    <button class="btn button-primary" preload="auto" style="font-weight: 500;">Hapus</button>
                                 </form>
                             </td>
                         </tr>
