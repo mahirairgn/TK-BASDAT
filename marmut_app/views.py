@@ -4,6 +4,7 @@ from django.db import connection, transaction
 from datetime import datetime
 import uuid
 from django.views.decorators.csrf import csrf_exempt
+
 @csrf_exempt
 def insert_label(request):
     if request.method == 'POST':
@@ -23,6 +24,7 @@ def insert_label(request):
         return render(request, 'auth_login.html')
     else:
         return HttpResponse("Invalid request method.")
+    
 @csrf_exempt    
 def register(request):
     if request.method == "POST":
