@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.db import connection, transaction
 from datetime import datetime
 import uuid
-
+@csrf_exempt
 def insert_label(request):
     if request.method == 'POST':
         id = uuid.uuid4()
@@ -22,7 +22,7 @@ def insert_label(request):
         return render(request, 'auth_login.html')
     else:
         return HttpResponse("Invalid request method.")
-    
+@csrf_exempt    
 def register(request):
     if request.method == "POST":
         email = request.POST.get('email')
