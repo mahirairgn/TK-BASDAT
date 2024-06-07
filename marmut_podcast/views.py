@@ -218,6 +218,7 @@ def show_list_episode_podcast(request, type):
     # Render template dengan data yang sudah diambil
     return render(request, 'list-episode-podcast.html', {'episodes': episodes, 'podcast_detail': podcast_detail})
 
+@csrf_exempt
 def create_episode(request, type):
     if request.method == 'POST':
         id_konten = type
