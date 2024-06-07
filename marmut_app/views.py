@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.db import connection, transaction
 from datetime import datetime
 import uuid
+from django.views.decorators.csrf import csrf_exempt
 @csrf_exempt
 def insert_label(request):
     if request.method == 'POST':
